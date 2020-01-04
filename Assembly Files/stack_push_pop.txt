@@ -1,0 +1,47 @@
+.model small
+.stack 100h
+.data
+.code
+
+main proc
+    ;setValues
+    mov ax, 1
+    mov bx, 2
+    mov cx, 3
+    mov dx, 4
+    
+    ;pushValues
+    push dx
+    push cx
+    push bx
+    push ax
+    
+    ;popValue1
+    pop ax
+    mov dx, ax
+    add dx, 48
+    mov ah, 2h
+    int 21h
+    
+    ;popValue2
+    pop bx
+    mov dx, bx
+    add dx, 48
+    mov ah, 2h
+    int 21h
+    
+    ;popValue3
+    pop cx
+    mov dx, cx
+    add dx, 48
+    mov ah, 2h
+    int 21h
+    
+    ;popValue4
+    pop dx
+    add dx, 48
+    mov ah, 2h
+    int 21h
+    
+endp
+end main

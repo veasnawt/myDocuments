@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Form</title>
+    <style>
+
+    </style>
+  </head>
+  <body>
+    <div id="box">
+      <p id="check"></p>
+      <form action="process.php" method="post" onsubmit="checkLogin(); return false;">
+        Name:<br>
+        <input id="name" name="name" type="text" placeholder="Enter your name"/><br>
+        Email:<br>
+        <input id="email" name="email" type="email" placeholder="Enter your Email ID"/><br>
+        Password:<br>
+        <input id="password" name="password" type="password" placeholder="Enter your password"/><br>
+        Confirm Password:<br>
+        <input id="password2" name="password2" type="password" placeholder="Re-enter your password"><br>
+        <input type="submit" value="Sign Up"/><br>
+      </form>
+              <input type="submit" value="Login"/><br>
+    </div>
+
+    <script type="text/javascript">
+      function checkLogin(){
+        var name = document.getElementById('name').value;
+        var email = document.getElementById('email').value;
+        var password = document.getElementById('password').value;
+        var password2 = document.getElementById('password2').value;
+        if(name.length > 3 && email.length > 3 && password.length > 3 && password2.length > 3){
+          if(password == password2){
+            document.getElementById("check").innerHTML = "Sign up Successful! " + '<a href="login.html">Login</a>';
+          }else {
+            alert("Password didn't match!")
+          }
+        }else{
+          alert("Everything must be more than 3 charactors.");
+        }
+      }
+    </script>
+  </body>
+</html>

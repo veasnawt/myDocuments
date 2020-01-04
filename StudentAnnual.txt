@@ -1,0 +1,11 @@
+
+	1. Display Students
+
+		No.	ID		Name		Major			Academic Year	Generation	Start Year	End Year		
+		1.	B20180020	Tep Veasna	Computer Science	2		5		2019		2020
+		2.	B20180022	Korn Sanit	Computer Science	2		5		2019		2020
+
+	2. Add a Student
+	3. Delete a Student
+	3. Search a Student	
+		

@@ -1,0 +1,32 @@
+.model small
+.stack 100h
+.data
+.code
+
+main proc
+    ;setValues
+    mov ax, 5
+    mov bx, 5
+    
+    ;pushValues 
+    
+    l1:
+        push ax
+        pop ax
+        
+        mov dx, ax  
+        add dx, 48 
+        mov ah, 2h
+        int 21h
+        sub ax, 47
+        dec bx 
+        
+        cmp bx, 0
+        jz fin
+         
+        loop l1 
+    fin:
+    
+    
+endp
+end main
